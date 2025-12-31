@@ -84,3 +84,13 @@ input:focus {
   font-size: 0.9rem;
   color: #64748B;
 }
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563EB;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
