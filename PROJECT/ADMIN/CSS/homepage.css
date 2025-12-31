@@ -80,5 +80,10 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
+.feature-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
 
 
