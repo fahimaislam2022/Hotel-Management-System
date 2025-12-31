@@ -63,6 +63,7 @@ if (isset($_SESSION["username"])) {
         </div>
       </div>
     </div>
-  </div> 
+  </div>
+  <script src="../JS/login.js"></script> 
 </body>
 </html>
