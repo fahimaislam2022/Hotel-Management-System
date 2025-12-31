@@ -12,7 +12,7 @@
     <div class="form-section">
       <div class="form-card">
         <div class="form-header">
-          <h1>Welcome Back</h1>
+          <h1>Welcome Admin</h1>
           <span>Please enter your credentials</span>
         </div>
 
