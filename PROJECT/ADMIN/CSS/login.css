@@ -113,3 +113,8 @@ button:hover {
   color: #2563EB;
   text-decoration: none;
 }
+.userError, .passError {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
