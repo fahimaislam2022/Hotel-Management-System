@@ -58,3 +58,6 @@ body {
   font-size: 0.9rem;
 }
 
+.form-group {
+  margin-bottom: 15px;
+}
