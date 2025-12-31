@@ -60,5 +60,10 @@
 </section>
 
 
+<footer>
+    <p>2025 Hotel Management System. All rights reserved.</p>
+</footer>
+
+
 </body>
 </html>
