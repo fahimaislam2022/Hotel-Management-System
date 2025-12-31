@@ -98,4 +98,11 @@ body {
     font-size: 14px;
     color: #64748B;
 }
+footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #64748B;
+    border-top: 1px solid #E2E8F0;
+}
 
