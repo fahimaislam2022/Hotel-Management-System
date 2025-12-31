@@ -61,3 +61,7 @@ body {
 .form-group {
   margin-bottom: 15px;
 }
+label {
+  font-size: 0.9rem;
+  color: #1E293B;
+}
