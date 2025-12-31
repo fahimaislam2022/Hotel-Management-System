@@ -55,4 +55,9 @@ body {
     background-color: #2563EB;
     color: white;
 }
+.btn-secondary {
+    background-color: white;
+    color: #1E293B;
+}
+
 
