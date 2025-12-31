@@ -53,3 +53,8 @@ body {
   color: #1E293B;
 }
 
+.form-header span {
+  color: #64748B;
+  font-size: 0.9rem;
+}
+
