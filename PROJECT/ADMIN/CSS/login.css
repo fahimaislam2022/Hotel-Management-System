@@ -94,3 +94,7 @@ button {
   cursor: pointer;
   font-weight: bold;
 }
+button:hover {
+  background-color: #1E40AF;
+}
+
