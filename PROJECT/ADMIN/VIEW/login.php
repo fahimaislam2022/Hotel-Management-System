@@ -1,3 +1,12 @@
+<?php
+session_start();
+@include("../CONTROL/login.php");
+
+if (isset($_SESSION["username"])) {
+    header("Location: dashboard.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <head>
   <title>HMS Admin Login</title>
