@@ -89,5 +89,13 @@ body {
     padding: 20px;
     text-align: center;
 }
+.feature-content h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
 
+.feature-content p {
+    font-size: 14px;
+    color: #64748B;
+}
 
