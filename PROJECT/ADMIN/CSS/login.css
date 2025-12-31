@@ -48,4 +48,8 @@ body {
   margin-bottom: 20px;
 }
 
+.form-header h2 {
+  margin-bottom: 5px;
+  color: #1E293B;
+}
 
