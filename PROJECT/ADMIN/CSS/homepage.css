@@ -9,5 +9,16 @@ body {
     background-color: #F8FAFC;
     color: #1E293B;
 }
+.hero {
+    height: 90vh;
+    background-image: url("http://localhost/WEB%20TECH%20PROJECT/WEB-TECH/PROJECT/ADMIN/IMAGE/Homepagebackground.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: fixed;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 
