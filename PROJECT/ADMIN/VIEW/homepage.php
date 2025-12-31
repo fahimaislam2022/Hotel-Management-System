@@ -22,6 +22,12 @@
     </div>
 </header>
 
+<section class="features">
+    <div class="feature-grid">
+
+     </div>
+</section>
+
 
 </body>
 </html>
