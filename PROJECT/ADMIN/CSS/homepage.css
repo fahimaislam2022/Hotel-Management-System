@@ -4,3 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F8FAFC;
+    color: #1E293B;
+}
+
+
