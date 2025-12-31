@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <head>
-
-
+    
+    
     <title>Hotel Management System</title>
     <link rel="stylesheet" href="../CSS/homepage.css">
 </head>
