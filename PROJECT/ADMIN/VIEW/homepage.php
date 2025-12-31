@@ -35,6 +35,17 @@
             </div>
         </div>
 
+        <div class="feature-item">
+            <div class="feature-image">
+                <img src="http://localhost/WEB%20TECH%20PROJECT/WEB-TECH/PROJECT/ADMIN/IMAGE/Homepage2nd.jpg" alt="Seamless Control">
+            </div>
+            <div class="feature-content">
+                <h3>Seamless Control</h3>
+                <p>Manage bookings, housekeeping, and guest data effortlessly.</p>
+            </div>
+        </div>
+
+
 
      </div>
 </section>
