@@ -25,6 +25,17 @@
 <section class="features">
     <div class="feature-grid">
 
+     <div class="feature-item">
+            <div class="feature-image">
+                <img src="http://localhost/WEB%20TECH%20PROJECT/WEB-TECH/PROJECT/ADMIN/IMAGE/Homepage1st.jpg" alt="Premium Rooms">
+            </div>
+            <div class="feature-content">
+                <h3>Premium Rooms</h3>
+                <p>Explore our ocean-view suites and cozy standard rooms.</p>
+            </div>
+        </div>
+
+
      </div>
 </section>
 
