@@ -68,5 +68,12 @@ body {
     padding: 70px 20px;
     background-color: white;
 }
+.feature-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
 
 
