@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <title>HMS Admin Login</title>
-  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../CSS/login.css">
 </head>
 <body>
   <div class="container">
