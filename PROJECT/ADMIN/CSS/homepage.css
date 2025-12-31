@@ -26,5 +26,10 @@ body {
     inset: 0;
     background-color: rgba(0, 0, 0, 0.55);
 }
+.hero-content {
+    position: relative;
+    color: white;
+    padding: 20px;
+}
 
 
