@@ -20,4 +20,22 @@ body {
   padding: 40px;
   position: relative;
 }
+.image-section::before {
+  content: "";
+  position: auto;
+  inset: 0;
+   
+} 
+
+.image-content {
+  position: auto;
+  z-index: 2;
+}
+.form-section {
+  flex: 1.1;                     
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
 
