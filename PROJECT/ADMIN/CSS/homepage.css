@@ -85,5 +85,9 @@ body {
     height: 220px;
     object-fit: cover;
 }
+.feature-content {
+    padding: 20px;
+    text-align: center;
+}
 
 
