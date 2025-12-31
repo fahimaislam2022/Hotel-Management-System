@@ -38,4 +38,8 @@ body {
   justify-content: center;
   background: white;
 }
+.form-card {
+  width: 90%;
+  max-width: 400px;
+}
 
