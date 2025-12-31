@@ -45,6 +45,15 @@
             </div>
         </div>
 
+         <div class="feature-item">
+            <div class="feature-image">
+                <img src="http://localhost/WEB%20TECH%20PROJECT/WEB-TECH/PROJECT/ADMIN/IMAGE/Homepage3rd.jpg" alt="Secure Booking">
+            </div>
+            <div class="feature-content">
+                <h3>Secure Booking</h3>
+                <p>Top-tier security ensuring your reservations are always safe.</p>
+            </div>
+        </div>
 
 
      </div>
