@@ -1,1 +1,2 @@
 CREATE TABLE `hotel_db`.`admin` (`id` INT NOT NULL AUTO_INCREMENT , `username` VARCHAR(50) NOT NULL , `password` VARCHAR(100) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES (NULL, 'admin', '123')
