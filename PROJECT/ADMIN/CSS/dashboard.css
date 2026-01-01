@@ -34,3 +34,11 @@ body {
     margin-bottom: 10px;
 }
 
+.menu a {
+    display: block;
+    padding: 8px 10px;
+    text-decoration: none;
+    color: #555;
+    border-radius: 5px;
+}
+
