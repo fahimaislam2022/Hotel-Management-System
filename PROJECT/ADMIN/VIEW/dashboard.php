@@ -17,5 +17,17 @@
         <li><a href="../Control/logout.php">Logout</a></li>
     </ul>
 </div>
+ <h3>Recent Bookings</h3>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Guest</th>
+                    <th>Room</th>
+                    <th>Status</th>
+                    <th>Check-in Date</th>
+                </tr>
+            </thead>
+</table>
 </body>
 </html>
