@@ -1,0 +1,4 @@
+CREATE TABLE `hotel_db`.`rooms` (`id` INT NOT NULL AUTO_INCREMENT , `room_number` VARCHAR(10) NOT NULL , `type` VARCHAR(50) NOT NULL , `status` VARCHAR(20) NOT NULL , `price` DECIMAL(10,2) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+INSERT INTO `rooms` (`id`, `room_number`, `type`, `status`, `price`) VALUES ('1', '101', 'Deluxe', 'Available ', '150')
+INSERT INTO `rooms` (`id`, `room_number`, `type`, `status`, `price`) VALUES (NULL, '102', 'Deluxe', 'Occupied ', '150')
+INSERT INTO `rooms` (`id`, `room_number`, `type`, `status`, `price`) VALUES (NULL, '103', 'Standard', 'Available ', '100');
