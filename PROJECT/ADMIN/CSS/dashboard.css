@@ -116,3 +116,10 @@ header h2 {
     color: #222;
 }
 
+.table-container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+}
+
