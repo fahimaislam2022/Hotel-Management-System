@@ -16,7 +16,7 @@ if ($res && $row = $res->fetch_assoc()) $available = $row['total'];
 $res = $conn->query("SELECT COUNT(*) AS total FROM bookings WHERE checkin_date = CURDATE()");
 if ($res && $row = $res->fetch_assoc()) $checkins_today = $row['total'];
 
-$res = $conn->query("SELECT SUM(total) AS rev FROM revenue WHERE date = CURDATE()");
+$res = $conn->query("SELECT SUM(amount) AS rev FROM bookings WHERE checkin_date = CURDATE()");
 if ($res && $row = $res->fetch_assoc()) $revenue = $row['rev'] ?? 0;
 
 $recent_bookings = $conn->query("SELECT * FROM bookings ORDER BY id DESC LIMIT 5");
