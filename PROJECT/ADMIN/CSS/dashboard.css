@@ -52,3 +52,7 @@ body {
     background-color: #1a56db;
     color: white;
 }
+.user-mini {
+    text-align: center;
+    margin-top: 30px;
+}
