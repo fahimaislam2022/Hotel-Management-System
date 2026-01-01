@@ -77,3 +77,7 @@ header {
     align-items: center;
     margin-bottom: 20px;
 }
+
+header h2 {
+    font-size: 24px;
+}
