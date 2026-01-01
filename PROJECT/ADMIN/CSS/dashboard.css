@@ -132,3 +132,9 @@ th, td {
     border-bottom: 1px solid #ccc;
     text-align: left;
 }
+
+th {
+    background-color: #f5f5f5;
+    color: #555;
+    font-weight: 600;
+}
