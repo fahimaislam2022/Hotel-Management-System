@@ -10,6 +10,7 @@ include("../CONTROL/dashboard_data.php");
 <!DOCTYPE html>
 <head>
     <title>HMS Dashboard</title>
+    <link rel="stylesheet" href="../CSS/dashboard.css">
 </head>
 <body>
 
