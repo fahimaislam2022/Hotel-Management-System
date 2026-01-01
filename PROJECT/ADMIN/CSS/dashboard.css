@@ -123,3 +123,7 @@ header h2 {
     padding: 15px;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
