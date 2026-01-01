@@ -65,7 +65,6 @@ include("../CONTROL/dashboard_data.php");
                 <tr>
                     <th>Guest</th>
                     <th>Room</th>
-                    <th>Status</th>
                     <th>Check-in Date</th>
                 </tr>
             </thead>
