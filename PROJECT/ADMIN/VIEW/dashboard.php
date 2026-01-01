@@ -68,6 +68,23 @@ include("../CONTROL/dashboard_data.php");
                     <th>Check-in Date</th>
                 </tr>
             </thead>
+             <tbody>
+                <?php if ($recent_bookings && $recent_bookings->num_rows > 0): ?>
+                    <?php while ($row = $recent_bookings->fetch_assoc()): ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($row['guest_name']); ?></td>
+                            <td><?php echo $row['room_number']; ?></td>
+                            <td><?php echo $row['status']; ?></td>
+                            <td><?php echo $row['checkin_date']; ?></td>
+                        </tr>
+                    <?php endwhile; ?>
+                <?php else: ?>
+                    <tr><td colspan="4">No recent bookings.</td></tr>
+                <?php endif; ?>
+            </tbody>
+
 </table>
+</div>
+</div>
 </body>
 </html>
