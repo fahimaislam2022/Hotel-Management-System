@@ -70,3 +70,10 @@ body {
     padding: 30px;
     overflow-y: auto;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
