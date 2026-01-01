@@ -29,6 +29,34 @@ include("../CONTROL/dashboard_data.php");
         <div class="user-info"><h4><?php echo $_SESSION['username']; ?></h4><span>Manager</span></div>
     </div>
 </div>
+
+<div class="main">
+    <header>
+        <h2>Dashboard Overview</h2>
+        <div class="date-display"><?php echo date("l, F j, Y"); ?></div>
+    </header>
+
+   
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h3>Total Rooms</h3>
+            <div class="value"><?php echo $total_rooms; ?></div>
+        </div>
+        <div class="stat-card">
+            <h3>Available</h3>
+            <div class="value"><?php echo $available; ?></div>
+        </div>
+        <div class="stat-card">
+            <h3>Check-ins Today</h3>
+            <div class="value"><?php echo $checkins_today; ?></div>
+        </div>
+        <div class="stat-card">
+            <h3>Daily Revenue</h3>
+            <div class="value">$<?php echo number_format($revenue, 2); ?></div>
+        </div>
+    </div>
+
+
  <h3>Recent Bookings</h3>
     <div class="table-container">
         <table>
