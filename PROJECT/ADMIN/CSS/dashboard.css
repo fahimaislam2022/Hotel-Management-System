@@ -96,3 +96,11 @@ header h2 {
     gap: 15px;
     margin-bottom: 25px;
 }
+.stat-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+}
