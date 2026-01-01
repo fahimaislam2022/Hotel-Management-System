@@ -127,3 +127,8 @@ table {
     width: 100%;
     border-collapse: collapse;
 }
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
