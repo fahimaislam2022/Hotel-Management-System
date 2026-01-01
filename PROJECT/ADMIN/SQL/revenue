@@ -1,0 +1,2 @@
+CREATE TABLE `hotel_db`.`revenue` (`id` INT NOT NULL AUTO_INCREMENT , `date` DATE NOT NULL , `total` DECIMAL(10,2) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+INSERT INTO `revenue` (`id`, `date`, `total`) VALUES ('1', '2025-12-31', '4250')
