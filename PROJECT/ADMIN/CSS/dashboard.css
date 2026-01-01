@@ -42,3 +42,7 @@ body {
     border-radius: 5px;
 }
 
+.menu a:hover {
+    background-color: #e5edff;
+    color: #1a56db;
+}
