@@ -1,0 +1,4 @@
+CREATE TABLE `hotel_db`.`customers` (`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(100) NOT NULL , `email` VARCHAR(100) NOT NULL , `phone` VARCHAR(20) NOT NULL , `total_visits` INT NOT NULL DEFAULT '0' , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+INSERT INTO `customers` (`id`, `name`, `email`, `phone`, `total_visits`) VALUES (NULL, 'Sinthia', 'sinthia', '017100000', '2');
+INSERT INTO `customers` (`id`, `name`, `email`, `phone`, `total_visits`) VALUES (NULL, 'Protik', 'protik@gmail.com', '019120000', '1');
+INSERT INTO `customers` (`id`, `name`, `email`, `phone`, `total_visits`) VALUES (NULL, 'Orpita', 'orpita@gamil.com', '016123456', '5');
