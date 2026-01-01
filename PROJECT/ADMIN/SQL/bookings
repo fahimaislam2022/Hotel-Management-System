@@ -1,4 +1,3 @@
 CREATE TABLE `hotel_db`.`bookings` (`id` INT NOT NULL AUTO_INCREMENT , `guest_name` VARCHAR(100) NOT NULL , `room_number` VARCHAR(10) NOT NULL , `checkin_date` DATE NOT NULL , `status` VARCHAR(30) NOT NULL , `amount` DECIMAL(10,2) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
-INSERT INTO `bookings` (`id`, `guest_name`, `room_number`, `checkin_date`, `status`, `amount`) VALUES (NULL, 'Sintha ', '101', 'CURDATE()', 'Confirmed ', '450')
-UPDATE `bookings` SET `checkin_date` = '2026-01-01' WHERE `bookings`.`id` = 1
-INSERT INTO `bookings` (`id`, `guest_name`, `room_number`, `checkin_date`, `status`, `amount`) VALUES (NULL, 'Protik', '305', '2025-11-27', 'Cleaning', '300')
+INSERT INTO `bookings` (`id`, `guest_name`, `room_number`, `checkin_date`, `status`, `amount`) VALUES (NULL, 'Sintha ', '101', CURDATE(), 'Confirmed ', '450');
+INSERT INTO `bookings` (`id`, `guest_name`, `room_number`, `checkin_date`, `status`, `amount`) VALUES (NULL, 'Protik', '305', CURDATE(), 'Cleaning', '300');
