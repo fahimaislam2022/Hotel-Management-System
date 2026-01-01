@@ -46,3 +46,9 @@ body {
     background-color: #e5edff;
     color: #1a56db;
 }
+
+
+.menu a.active {
+    background-color: #1a56db;
+    color: white;
+}
