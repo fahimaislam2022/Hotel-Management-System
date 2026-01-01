@@ -75,7 +75,6 @@ include("../CONTROL/dashboard_data.php");
                         <tr>
                             <td><?php echo htmlspecialchars($row['guest_name']); ?></td>
                             <td><?php echo $row['room_number']; ?></td>
-                            <td><?php echo $row['status']; ?></td>
                             <td><?php echo $row['checkin_date']; ?></td>
                         </tr>
                     <?php endwhile; ?>
