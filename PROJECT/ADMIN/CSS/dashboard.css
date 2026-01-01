@@ -11,3 +11,10 @@ body {
     height: 100vh;
 }
 
+.sidebar {
+    width: 220px;
+    background-color: #ffffff;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+}
+
