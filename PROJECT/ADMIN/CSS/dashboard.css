@@ -25,3 +25,7 @@ body {
     margin-bottom: 25px;
 }
 
+.menu {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
