@@ -23,7 +23,7 @@ include("../CONTROL/dashboard_data.php");
         <li><a href="booking.php">Booking & Billing</a></li>
         <li><a href="promotions.php">Promotions</a></li>
         <li><a href="changepassword.php">Change Password</a></li>
-        <li><a href="../Control/logout.php">Logout</a></li>
+        <li><a href="../CONTROL/logout.php">Logout</a></li>
     </ul>
     <div class="user-mini">
         <div class="user-info"><h4><?php echo $_SESSION['username']; ?></h4><span>Manager</span></div>
