@@ -23,8 +23,8 @@ include("../CONTROL/rooms_data.php");
         <li><a href="rooms.php" class="active">Rooms</a></li>
         <li><a href="housekeeping.php">Housekeeping</a></li>
         <li><a href="customers.php">Customers Profiles</a></li>
-        <li><a href="booking.php">Booking & Billing</a></li>
-        <li><a href="promotions.php">Promotions</a></li>
+        <li><a href="booking.php">Booking </a></li>
+        <li><a href="billing.php">Billing</a></li>
         <li><a href="changepassword.php">Change Password</a></li>
         <li><a href="../CONTROL/logout.php">Logout</a></li>
     </ul>
@@ -67,7 +67,7 @@ include("../CONTROL/rooms_data.php");
                 <option value="Deluxe">Deluxe</option>
                 <option value="Suite">Suite</option>
             </select>
-            <input type="number" name="price" placeholder="Price" required>
+            <input type="hidden" name="price" value="0">
             <select name="status">
                 <option value="Available">Available</option>
                 <option value="Occupied">Occupied</option>
@@ -113,7 +113,7 @@ include("../CONTROL/rooms_data.php");
                                 <option value="Suite" <?php if ($r['type']=="Suite") echo "selected"; ?>>Suite</option>
                             </select>
                         </td>
-                        <td><input type="number" name="price" value="<?php echo $r['price']; ?>" required></td>
+                        <td><?php echo $r['price']; ?></td>
                         <td>
                             <select name="status" <?php if ($r['booking_status'] == "Confirmed") echo "disabled"; ?>>
                                 <option value="Available" <?php if ($r['status']=="Available") echo "selected"; ?>>Available</option>

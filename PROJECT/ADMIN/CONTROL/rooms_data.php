@@ -8,10 +8,17 @@ $conn->query("
         SELECT room_number FROM bookings WHERE status = 'Confirmed'
     )
 ");
-
+function getRoomPrice($type) {
+    switch ($type) {
+        case 'Standard': return 150;
+        case 'Deluxe': return 250;
+        case 'Suite': return 400;
+        default: return 0;
+    }
+}
 if (isset($_POST['action']) && $_POST['action'] === "add") {
     $type = $_POST['type'];
-    $price = $_POST['price'];
+    $price = getRoomPrice($type);
     $status = $_POST['status'];
     $imageName = '';
 
@@ -33,7 +40,7 @@ if (isset($_POST['action']) && $_POST['action'] === "add") {
 if (isset($_POST['action']) && $_POST['action'] === "edit") {
     $room_number = $_POST['room_number'];
     $type = $_POST['type'];
-    $price = $_POST['price'];
+    $price =  getRoomPrice($type);
     $status = $_POST['status'];
 
     

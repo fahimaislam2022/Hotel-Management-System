@@ -21,8 +21,8 @@ include("../CONTROL/dashboard_data.php");
         <li><a href="rooms.php">Rooms</a></li>
         <li><a href="housekeeping.php">Housekeeping</a></li>
         <li><a href="customers.php">Customers Profiles</a></li>
-        <li><a href="booking.php">Booking & Billing</a></li>
-        <li><a href="promotions.php">Promotions</a></li>
+        <li><a href="booking.php">Booking</a></li>
+        <li><a href="billing.php">Billing</a></li>
         <li><a href="changepassword.php">Change Password</a></li>
         <li><a href="../CONTROL/logout.php">Logout</a></li>
     </ul>
@@ -72,7 +72,7 @@ include("../CONTROL/dashboard_data.php");
                 <?php if ($recent_bookings && $recent_bookings->num_rows > 0): ?>
                     <?php while ($row = $recent_bookings->fetch_assoc()): ?>
                         <tr>
-                            <td><?php echo htmlspecialchars($row['guest_name']); ?></td>
+                            <td><?php echo htmlspecialchars($row['id_customer']); ?></td>
                             <td><?php echo $row['room_number']; ?></td>
                             <td><?php echo $row['checkin_date']; ?></td>
                         </tr>
