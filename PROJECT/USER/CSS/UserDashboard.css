@@ -1,0 +1,122 @@
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+body {
+    background:#fff;
+               
+    
+    color: #000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color:  #000;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.card {
+    background: #fff;
+    backdrop-filter: blur(10px);
+    border: 1px solid #007bff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    color: #000;
+}
+
+.card h2 {
+    font-size: 20px;
+    color:black;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.stat-item {
+    margin-bottom: 15px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 14px;
+    color : rgba(0,0,0,0.6);
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #007bff;
+}
+
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+.logout-container{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.btn, .logout-btn{
+    width: 150px;
+    padding: 12px;
+    border: 2px solid #007bff;
+    border-radius: 30px;
+    background: #007bff;
+    color:white;
+    font-size: 16px;
+    font-weight: 600;}
+
+
+    .btn {
+width: 100%;
+display: block;
+    }
+.logout-btn {
+    width: 180px; 
+}
+
+.btn:hover, .logout-btn:hover {
+    background: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,123,255,0.2);
+}
+
+.btn:active, .logout-btn:active {
+    transform: translateY(-1px);
+}
+
+
+
