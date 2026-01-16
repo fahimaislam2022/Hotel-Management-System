@@ -58,10 +58,20 @@ $rooms = [
 
             <p><strong>Features:</strong> <?= $room['features']; ?></p>
 
-            <button class="btn"
-                onclick="window.location.href='RoomDetails.php?id=<?= $roomNo; ?>'">
-                View Details
-            </button>
+            <?php if ($room['status'] === 'booked'): ?>
+    <button class="btn" style="background:#ccc; cursor:not-allowed;" disabled>
+        Booked
+    </button>
+<?php else: ?>
+    <button class="btn"
+        onclick="window.location.href='RoomDetails.php?id=<?= $roomNo; ?>'">
+        View Details
+    </button>
+<?php endif; ?>
+
+
+
+
         </div>
     </div>
 <?php endforeach; ?>
