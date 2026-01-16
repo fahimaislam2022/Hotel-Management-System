@@ -1,83 +1,76 @@
+<?php
+$rooms = [
+    101 => [
+        "type" => "Single",
+        "price" => 2000,
+        "status" => "available",
+        "features" => "Wi-Fi, Balcony",
+        "image" => "../Image/http://localhost/WebtechFinalProject/WEB-TECH/PROJECT/USER/Image/Room101.jpg"
+    ],
+    102 => [
+        "type" => "Single",
+        "price" => 3500,
+        "status" => "booked",
+        "features" => "Wi-Fi, Air Conditioning",
+        "image" => "../Image/http://localhost/WebtechFinalProject/WEB-TECH/PROJECT/USER/Image/Room102.jpg"
+    ],
+    103 => [
+        "type" => "Suite",
+        "price" => 6000,
+        "status" => "available",
+        "features" => "Wi-Fi, AC, Balcony",
+        "image" => "../Image/http://localhost/WebtechFinalProject/WEB-TECH/PROJECT/USER/Image/Room103.jpg"
+    ],
+    104 => [
+        "type" => "Double",
+        "price" => 4000,
+        "status" => "booked",
+        "features" => "Wi-Fi, AC",
+        "image" => "../Image/http://localhost/WebtechFinalProject/WEB-TECH/PROJECT/USER/Image/Room104.jpg"
+    ]
+];
+?>
+
 <!DOCTYPE html>
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Rooms</title>
-    <script>
-        function submitFilters() {
-            document.getElementById('filterForm').submit();
-        }
-
-        function resetFilters() {
-            document.getElementById('filterForm').reset();submitFilters();
-        }
-        </script>
-         <link rel="stylesheet" href="../CSS/RoomInventory.css">
+    <title>Room Inventory</title>
+    <link rel="stylesheet" href="../CSS/RoomInventory.css">
 </head>
 <body>
-    <h1>Room Inventory</h1>
 
-    <form method="POST" action ="">
-        <div class ="filters">
-            <select name ="type" onchange ="submitFilters">
-           <option value ="">Room Type </option>
-           <option value ="1">Single </option>
-           <option value ="2">Double </option>
-           <option value ="3">Suite </option>
-    </select>
-
-    <select name ="feature" onchange ="submitFilters">
-           <option value ="">Features </option>
-           <option value ="1">Wi-fi </option>
-           <option value ="2">Air Conditioning </option>
-           <option value ="3">Balcony </option>
-    </select>
-
-  <select name="price" onchange="submitFilters()">
-            <option value="">Price </option>
-            <option value="0-2000">0-2000</option>
-            <option value="2001-4000">2001-4000</option>
-            <option value="4001-6000">4001-6000</option>
-            <option value="6001-10000">6001-10000</option>
-        </select>
-       
-        
-    </div>
-    </form>
+<h1>Room Inventory</h1>
 
 <div class="grid">
-    
+<?php foreach ($rooms as $roomNo => $room): ?>
     <div class="room-card">
-        <img src="" alt="Room 101">
+        <img src="<?= $room['image']; ?>" alt="Room <?= $roomNo; ?>">
+
         <div class="room-card-content">
-            <h3>Room 101 — Single</h3>
-            <p class="price">TK 2000.00</p>
-            <p><span class="badge available">Available</span></p>
-            <p><strong>Features:</strong> Wi-Fi, Balcony</p>
-            <button class="btn" onclick="window.location.href='RoomBooking101.php'">View Details</button>
+            <h3>Room <?= $roomNo; ?> — <?= $room['type']; ?></h3>
+            <p class="price">TK <?= number_format($room['price'], 2); ?></p>
+
+            <p>
+                <span class="badge <?= $room['status']; ?>">
+                    <?= ucfirst($room['status']); ?>
+                </span>
+            </p>
+
+            <p><strong>Features:</strong> <?= $room['features']; ?></p>
+
+            <button class="btn"
+                onclick="window.location.href='RoomDetails.php?id=<?= $roomNo; ?>'">
+                View Details
+            </button>
         </div>
     </div>
-
-    <div class="room-card">
-        <img src="" alt="Room 102">
-        <div class="room-card-content">
-            <h3>Room 102 — Double</h3>
-            <p class="price">TK 3500.00</p>
-            <p><span class="badge booked">Booked</span></p>
-            <p><strong>Features:</strong> Wi-Fi, Air Conditioning</p>
-            <button class="btn" onclick="window.location.href='BookRoom.php?id=102'">View Details</button>
-        </div>
-    </div>
-
- 
+<?php endforeach; ?>
 </div>
 
+<button class="btn secondary back-btn"
+onclick="window.location.href='UserDashboard.php'">
+Back to Dashboard
+</button>
 
-
-<button class="btn secondary back-btn" onclick="window.location.href='userdashboard.php'">Back to Dashboard</button>
-   
-
-    
 </body>
 </html>
