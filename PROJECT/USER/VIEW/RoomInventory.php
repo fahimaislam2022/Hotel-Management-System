@@ -35,7 +35,7 @@ $rooms = [
 <html>
 <head>
     <title>Room Inventory</title>
-    <link rel="stylesheet" href="../CSS/Roominventory.css">
+    <link rel="stylesheet" href="../CSS/Inventory.css">
 </head>
 <body>
 

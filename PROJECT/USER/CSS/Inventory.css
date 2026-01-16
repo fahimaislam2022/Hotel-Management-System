@@ -1,7 +1,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #ffffff;
+    background: #fff;
+    
     margin: 0;
     padding: 20px;
     color: #000;
@@ -24,7 +25,7 @@ h1 {
 
 
 .room-card {
-    background: #ffffff;
+    background: #fff;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
@@ -110,7 +111,7 @@ h1 {
 
 .btn:disabled,
 .btn.disabled {
-    background: #cccccc;
+    background: #ccc;
     color: #666666;
     cursor: not-allowed;
     transform: none;
