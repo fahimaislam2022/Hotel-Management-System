@@ -35,7 +35,7 @@ $rooms = [
 <html>
 <head>
     <title>Room Inventory</title>
-    <link rel="stylesheet" href="../CSS/RoomInventory.css">
+    <link rel="stylesheet" href="../CSS/Roominventory.css">
 </head>
 <body>
 
@@ -59,17 +59,16 @@ $rooms = [
             <p><strong>Features:</strong> <?= $room['features']; ?></p>
 
             <?php if ($room['status'] === 'booked'): ?>
-    <button class="btn" style="background:#ccc; cursor:not-allowed;" disabled>
+    <button class="btn"  disabled>
         Booked
     </button>
+
 <?php else: ?>
     <button class="btn"
         onclick="window.location.href='RoomDetails.php?id=<?= $roomNo; ?>'">
         View Details
     </button>
 <?php endif; ?>
-
-
 
 
         </div>
