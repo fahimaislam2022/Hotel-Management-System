@@ -5,28 +5,28 @@ $rooms = [
         "price" => 2000,
         "status" => "available",
         "features" => "Wi-Fi, Balcony",
-        "image" => "../Image/http://localhost/WebtechFinalProject/WEB-TECH/PROJECT/USER/Image/Room101.jpg"
+        "image" => "../Image/Room101.jpg"
     ],
     102 => [
         "type" => "Single",
         "price" => 3500,
         "status" => "booked",
         "features" => "Wi-Fi, Air Conditioning",
-        "image" => "../Image/http://localhost/WebtechFinalProject/WEB-TECH/PROJECT/USER/Image/Room102.jpg"
+        "image" => "../Image/Room102.jpg"
     ],
     103 => [
         "type" => "Suite",
         "price" => 6000,
         "status" => "available",
         "features" => "Wi-Fi, AC, Balcony",
-        "image" => "../Image/http://localhost/WebtechFinalProject/WEB-TECH/PROJECT/USER/Image/Room103.jpg"
+        "image" => "../Image/Room103.jpg"
     ],
     104 => [
         "type" => "Double",
         "price" => 4000,
         "status" => "booked",
         "features" => "Wi-Fi, AC",
-        "image" => "../Image/http://localhost/WebtechFinalProject/WEB-TECH/PROJECT/USER/Image/Room104.jpg"
+        "image" => "../Image/Room104.jpg"
     ]
 ];
 ?>
