@@ -11,6 +11,7 @@ if (!isset($_SESSION['username'])) {
 <head>
     <title>HMS Housekeeping</title>
     <link rel="stylesheet" href="../CSS/dashboard.css">
+    <link rel="stylesheet" href="../CSS/housekeeping.css">
 </head>
 <body>
 
