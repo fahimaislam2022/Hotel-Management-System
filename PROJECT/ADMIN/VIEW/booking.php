@@ -10,6 +10,7 @@ include("../CONTROL/booking_data.php");
 <head>
     <title>HMS Booking</title>
     <link rel="stylesheet" href="../CSS/dashboard.css">
+    <link rel="stylesheet" href="../CSS/booking.css">
 </head>
 <body>
 
