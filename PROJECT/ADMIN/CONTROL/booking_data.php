@@ -31,5 +31,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
         echo "Error: " . $conn->error;
     }
 }
+if (isset($_GET['delete'])) {
+    $id_booking = $_GET['delete'];
+    $conn->query("DELETE FROM bookings WHERE id_booking=$id_booking");
+    header("Location: ../VIEW/booking.php?msg=deleted");
+    exit();
+}
 
+
+$bookings = $conn->query("
+    SELECT b.*, c.name AS customer_name, r.type AS room_type
+    FROM bookings b
+    LEFT JOIN customers c ON b.id_customer = c.id_customer
+    LEFT JOIN rooms r ON b.room_number = r.room_number
+    ORDER BY b.id_booking DESC
+");
+
+
+$customers = $conn->query("SELECT * FROM customers");
+$rooms = $conn->query("SELECT * FROM rooms WHERE status='Available'");
 ?>
