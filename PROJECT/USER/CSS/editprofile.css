@@ -1,0 +1,132 @@
+*{
+margin:0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins',sans-serif;
+}
+body{
+
+  background: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+
+}
+
+.edit-card{
+width: 100%;
+max-width: 400px;
+padding: 30px;
+border-radius: 15px;
+background: #fff;
+backdrop-filter: blur(12px);
+box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+text-align:center;
+color:#000;
+
+}
+
+.edit-card h1{
+ margin-bottom: 15px;
+ font-size: 26px;
+ color: #000;
+}
+
+#profile-edit{
+
+    width:120px;
+    height: 120px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+
+}
+
+label{
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #007bff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] 
+{
+width:100%;
+padding: 12px;
+margin-top: 6px;
+
+border: 1px solid #007bff;
+border-radius: 10px ;
+background: #fff;
+ font-size: 14px;
+ color: #000;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+
+
+
+input[type="submit"],
+input[type="button"] {
+
+    width:100%;
+    padding: 14px;
+    margin-top:15px;
+    border: 2px solid #007bff;
+    border-radius:25px;
+    background: #007bff;
+    color: #fff;
+    font-size:16px;
+    font-weight:600;
+
+}
+
+input[type="submit"]:hover{
+
+    background: #fff ;
+    color: #007bff;
+}
+
+.secondary-btn{
+   width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: 2px solid #007bff;
+    border-radius: 30px;
+    background: transparent;
+    color: #007bff;
+    font-weight: 600;
+    
+}
+.secondary-btn:hover {
+background-color: #007bff;
+color: #fff;
+ transform: translate(-2px);
+}
+
+.err {
+    color: #ff4d4d;
+    font-size: 13px;
+    margin: 4px 0;
+}
+.ok {
+    color: #2ecc71;
+    font-size: 13px;
+    margin: 4px 0;
+    text-align: center;
+}
