@@ -37,7 +37,6 @@ function checkSignupPassword() {
 }
 
 function signupUser() {
-
     checkSignupUsername();
     checkSignupEmail();
     checkSignupPassword();
@@ -47,41 +46,37 @@ function signupUser() {
         document.getElementById('signupEError').innerHTML !== "" ||
         document.getElementById('signupPError').innerHTML !== ""
     ) {
-        return;
+        return; // stop if there are validation errors
     }
 
-    const username = document.getElementById('signupUsername').value.trim();
-    const email = document.getElementById('signupEmail').value.trim();
-    const password = document.getElementById('signupPassword').value;
+    const username = encodeURIComponent(document.getElementById('signupUsername').value.trim());
+    const email = encodeURIComponent(document.getElementById('signupEmail').value.trim());
+    const password = encodeURIComponent(document.getElementById('signupPassword').value);
 
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "../CONTROL/UserSignup.php", true);
+    xhr.open("POST", "../CONTROL/UserSignupHandler.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
     xhr.onload = function () {
+        const msg = document.getElementById('signupSuccess');
         if (this.status === 200) {
             const response = this.responseText.trim();
 
             if (response === "success") {
-                const msg = document.getElementById('signupSuccess');
                 msg.style.color = "green";
                 msg.innerHTML = "Signup successful! Redirecting...";
-
                 setTimeout(() => {
                     window.location.href = "../View/UserDashboard.php";
                 }, 1500);
             } else {
-                document.getElementById('signupSuccess').style.color = "red";
-                document.getElementById('signupSuccess').innerHTML = response;
+                msg.style.color = "red";
+                msg.innerHTML = response;
             }
         } else {
-            document.getElementById('signupSuccess').innerHTML = "Server error!";
+            msg.style.color = "red";
+            msg.innerHTML = "Server error!";
         }
     };
 
-    xhr.send(
-        "username=" + encodeURIComponent(username) +
-        "&email=" + encodeURIComponent(email) +
-        "&password=" + encodeURIComponent(password)
-    );
+    xhr.send(`username=${username}&email=${email}&password=${password}`);
 }

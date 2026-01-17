@@ -113,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <button type="submit">Confirm Booking</button>
     </form>
 
-    <a class="back-btn" href="Inventory.php">Back</a>
+    <a class="back-btn" href="RoomInventory.php">Back</a>
 </div>
 
 <script>
