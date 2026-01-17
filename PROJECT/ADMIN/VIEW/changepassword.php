@@ -41,6 +41,36 @@ if (isset($_SESSION['msg'])) {
         </div>
     </div>
 </div>
+<div class="main">
+    <header>
+        <h2>Change Password</h2>
+        <div class="date-display"><?php echo date("l, F j, Y"); ?></div>
+    </header>
+
+    <div class="form-card">
+        <h3 style="text-align:center; margin-bottom:20px;">Update Security</h3>
+
+        <?php if ($msg != ""): ?>
+            <div class="alert <?php echo $msgType; ?>"><?php echo $msg; ?></div>
+        <?php endif; ?>
+
+        <form action="../CONTROL/changepassword_data.php" method="POST">
+            <div class="form-group">
+                <label>Current Password</label>
+                <input type="password" name="current_password" required>
+            </div>
+            <div class="form-group">
+                <label>New Password</label>
+                <input type="password" name="new_password" required>
+            </div>
+            <div class="form-group">
+                <label>Confirm New Password</label>
+                <input type="password" name="confirm_password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Update Password</button>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>
