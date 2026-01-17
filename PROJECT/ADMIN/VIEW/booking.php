@@ -32,6 +32,40 @@ include("../CONTROL/booking_data.php");
         </div>
     </div>
 </div>
+<div class="form-box">
+        <h4>Create New Booking</h4>
+        <form method="POST" action="../CONTROL/booking_data.php">
+            <input type="hidden" name="action" value="add">
+
+            <label>Customer</label>
+            <select name="id_customer" required>
+                <option value="">Select Customer</option>
+                <?php while ($c = $customers->fetch_assoc()): ?>
+                    <option value="<?php echo $c['id_customer']; ?>">
+                        <?php echo htmlspecialchars($c['name']); ?>
+                    </option>
+                <?php endwhile; ?>
+            </select>
+
+            <label>Room</label>
+            <select name="room_number" required>
+                <option value="">Select Room</option>
+                <?php while ($r = $rooms->fetch_assoc()): ?>
+                    <option value="<?php echo $r['room_number']; ?>">
+                        Room <?php echo $r['room_number'] . " - " . $r['type'] . " ($" . $r['price'] . ")"; ?>
+                    </option>
+                <?php endwhile; ?>
+            </select>
+
+            <label>Check-in Date</label>
+            <input type="date" name="checkin_date" required>
+
+            <label>Check-out Date</label>
+            <input type="date" name="checkout_date" required>
+
+            <button type="submit" class="btn btn-primary">Confirm Booking</button>
+        </form>
+    </div>
 
 </body>
 </html>
