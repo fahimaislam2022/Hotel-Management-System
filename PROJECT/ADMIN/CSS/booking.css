@@ -26,3 +26,12 @@
     color: #444;
 }
 
+.form-box input,
+.form-box select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
