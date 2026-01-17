@@ -19,5 +19,28 @@ if (isset($_POST['action']) && $_POST['action'] == "add") {
         echo "Error: " . $conn->error;
     }
 }
+if (isset($_POST['action']) && $_POST['action'] == "edit") {
+    $id_customer = $_POST['id_customer'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $password = $_POST['password'];
+    $total_visits = $_POST['total_visits'];
 
+    
+    if (password_get_info($password)['algo'] === 0) {
+        $password = password_hash($password, PASSWORD_DEFAULT);
+    }
+
+    $sql = "UPDATE customers 
+            SET name='$name', email='$email', phone='$phone', password='$password', total_visits='$total_visits'
+            WHERE id_customer=$id_customer";
+
+    if ($conn->query($sql)) {
+        header("Location: ../VIEW/customers.php?msg=updated");
+        exit();
+    } else {
+        echo "Error updating: " . $conn->error;
+    }
+}
 ?>
