@@ -29,3 +29,7 @@
     border-radius: 6px;
     padding: 15px;
 }
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
