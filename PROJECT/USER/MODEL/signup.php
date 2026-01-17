@@ -1,6 +1,6 @@
 <?php
 require_once('../VIEW/UserSignup.php')
-include('../MODEL/DatabaseConnection.php')
+
 
 include "db.php";
  
