@@ -27,6 +27,20 @@ if (!isset($_SESSION['username'])) {
         <li><a href="../CONTROL/logout.php">Logout</a></li>
     </ul>
 </div>
+<div class="main">
+    <header>
+        <h2>Housekeeping Status</h2>
+        <div class="date-display"><?php echo date("l, F j, Y"); ?></div>
+    </header>
+
+    <?php
+    if (isset($_GET['msg'])) {
+        echo "<p style='background:#d4edda; color:#155724; padding:10px; border-radius:5px;'>Cleaning status updated!</p>";
+    } elseif (isset($_GET['error'])) {
+        echo "<p style='background:#f8d7da; color:#721c24; padding:10px; border-radius:5px;'>Error updating status!</p>";
+    }
+    ?>
+
 
 
 <div class="table-container">
@@ -69,6 +83,6 @@ if (!isset($_SESSION['username'])) {
             ?>
         </table>
     </div>
-
+</div>
 </body>
 </html>
