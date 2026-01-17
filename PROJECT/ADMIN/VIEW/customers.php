@@ -48,10 +48,15 @@ include("../CONTROL/customer_data.php");
         <h4>Add New Customer</h4>
         <form method="POST" action="../CONTROL/customers_data.php">
             <input type="hidden" name="action" value="add">
+            <label>Full Name</label>
             <input type="text" name="name" placeholder="Full Name" required>
+            <label>Email Address</label>
             <input type="email" name="email" placeholder="Email Address" required>
+            <label>Phone Number</label>
             <input type="text" name="phone" placeholder="Phone Number" required>
+            <label>Password</label>
             <input type="password" name="password" placeholder="Password" required>
+            <label>Total Visits</label>
             <input type="number" name="total_visits" placeholder="Total Visits" value="0" min="0">
             <button type="submit" class="btn btn-primary" style="width:100%">Add Customer</button>
         </form>
