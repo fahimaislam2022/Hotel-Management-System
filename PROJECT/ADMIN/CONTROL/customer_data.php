@@ -43,4 +43,10 @@ if (isset($_POST['action']) && $_POST['action'] == "edit") {
         echo "Error updating: " . $conn->error;
     }
 }
+if (isset($_GET['delete'])) {
+    $id_customer = $_GET['delete'];
+    $conn->query("DELETE FROM customers WHERE id_customer=$id_customer");
+    header("Location: ../VIEW/customers.php?msg=deleted");
+    exit();
+}
 ?>
