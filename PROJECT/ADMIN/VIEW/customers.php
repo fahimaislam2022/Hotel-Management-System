@@ -28,6 +28,17 @@ include("../CONTROL/customer_data.php");
         <li><a href="../CONTROL/logout.php">Logout</a></li>
     </ul>
 </div>
+<div class="main">
+    <header>
+        <h2>Customer Management</h2>
+        <div class="date-display"><?php echo date("l, F j, Y"); ?></div>
+    </header>
+
+    <?php if (isset($_GET['msg'])): ?>
+        <div style="color: green; background: #e6ffe6; padding: 10px; border-radius: 6px; margin-bottom: 10px;">
+            Customer successfully <?php echo htmlspecialchars($_GET['msg']); ?>.
+        </div>
+    <?php endif; ?>
 
  <div class="form-box">
         <h4>Add New Customer</h4>
@@ -82,6 +93,6 @@ include("../CONTROL/customer_data.php");
             <?php endif; ?>
         </table>
     </div>
-
+</div>
 </body>
 </html>
