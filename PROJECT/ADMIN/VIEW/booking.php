@@ -66,6 +66,45 @@ include("../CONTROL/booking_data.php");
             <button type="submit" class="btn btn-primary">Confirm Booking</button>
         </form>
     </div>
+<div class="table-container">
+        <h3>All Bookings</h3>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Customer</th>
+                <th>Room</th>
+                <th>Check-in</th>
+                <th>Check-out</th>
+                <th>Status</th>
+                <th>Amount</th>
+                <th>Action</th>
+            </tr>
+
+            <?php if ($bookings && $bookings->num_rows > 0): ?>
+                <?php while ($b = $bookings->fetch_assoc()): ?>
+                    <tr>
+                        <td><?php echo $b['id_booking']; ?></td>
+                        <td><?php echo htmlspecialchars($b['customer_name']); ?></td>
+                        <td><?php echo $b['room_number'] . " (" . $b['room_type'] . ")"; ?></td>
+                        <td><?php echo $b['checkin_date']; ?></td>
+                        <td><?php echo $b['checkout_date']; ?></td>
+                        <td><?php echo $b['status']; ?></td>
+                        <td>$<?php echo number_format($b['amount'], 2); ?></td>
+                        <td>
+                            <a href="../CONTROL/booking_data.php?delete=<?php echo $b['id_booking']; ?>" 
+                               class="btn btn-danger"
+                               onclick="return confirm('Are you sure you want to delete this booking?');">
+                               Delete
+                            </a>
+                        </td>
+                    </tr>
+                <?php endwhile; ?>
+            <?php else: ?>
+                <tr><td colspan="8">No bookings found.</td></tr>
+            <?php endif; ?>
+        </table>
+    </div>
+
 
 </body>
 </html>
