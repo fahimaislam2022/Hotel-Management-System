@@ -28,5 +28,47 @@ if (!isset($_SESSION['username'])) {
     </ul>
 </div>
 
+
+<div class="table-container">
+        <h3>All Rooms Cleaning Status</h3>
+        <table>
+            <tr>
+                <th>Room No</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Cleaning Status</th>
+                <th>Action</th>
+            </tr>
+            <?php
+            if ($rooms && $rooms->num_rows > 0) {
+                while ($r = $rooms->fetch_assoc()) {
+            ?>
+            <tr>
+                <form method="POST" action="../CONTROL/housekeeping_data.php">
+                    <input type="hidden" name="action" value="update_status">
+                    <input type="hidden" name="room_number" value="<?php echo $r['room_number']; ?>">
+                    <td><?php echo $r['room_number']; ?></td>
+                    <td><?php echo $r['type']; ?></td>
+                    <td><?php echo $r['price']; ?></td>
+                    <td>
+                        <select name="cleaning_status">
+                            <option value="Dirty" <?php if ($r['cleaning_status']=="Dirty") echo "selected"; ?>>Dirty</option>
+                            <option value="In Progress" <?php if ($r['cleaning_status']=="In Progress") echo "selected"; ?>>In Progress</option>
+                            <option value="Clean" <?php if ($r['cleaning_status']=="Clean") echo "selected"; ?>>Clean</option>
+                            <option value="Maintenance" <?php if ($r['cleaning_status']=="Maintenance") echo "selected"; ?>>Maintenance</option>
+                        </select>
+                    </td>
+                    <td><button type="submit" class="btn btn-warning">Update</button></td>
+                </form>
+            </tr>
+            <?php
+                }
+            } else {
+                echo "<tr><td colspan='5'>No rooms found.</td></tr>";
+            }
+            ?>
+        </table>
+    </div>
+
 </body>
 </html>
