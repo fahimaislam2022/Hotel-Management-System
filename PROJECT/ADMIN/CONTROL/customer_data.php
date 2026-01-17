@@ -1,4 +1,3 @@
-control customer 
 <?php
 include("../MODEL/db.php");
 
@@ -49,4 +48,5 @@ if (isset($_GET['delete'])) {
     header("Location: ../VIEW/customers.php?msg=deleted");
     exit();
 }
+$customers = $conn->query("SELECT * FROM customers ORDER BY id_customer ASC");
 ?>
