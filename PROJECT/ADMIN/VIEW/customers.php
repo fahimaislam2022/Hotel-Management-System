@@ -29,5 +29,18 @@ include("../CONTROL/customer_data.php");
     </ul>
 </div>
 
+ <div class="form-box">
+        <h4>Add New Customer</h4>
+        <form method="POST" action="../CONTROL/customers_data.php">
+            <input type="hidden" name="action" value="add">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="number" name="total_visits" placeholder="Total Visits" value="0" min="0">
+            <button type="submit" class="btn btn-primary" style="width:100%">Add Customer</button>
+        </form>
+    </div>
+
 </body>
 </html>
