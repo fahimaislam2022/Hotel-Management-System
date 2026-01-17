@@ -42,3 +42,7 @@
     padding: 15px;
 }
 
+.table-container h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
