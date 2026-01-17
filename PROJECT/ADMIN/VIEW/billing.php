@@ -4,7 +4,7 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
-
+include("../CONTROL/billing_data.php");
 ?>
 <!DOCTYPE html>
 <html>
