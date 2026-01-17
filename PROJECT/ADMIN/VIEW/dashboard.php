@@ -20,7 +20,7 @@ include("../CONTROL/dashboard_data.php");
         <li><a href="dashboard.php" class="active">Home</a></li>
         <li><a href="rooms.php">Rooms</a></li>
         <li><a href="housekeeping.php">Housekeeping</a></li>
-        <li><a href="customers.php">Customers Profiles</a></li>
+        <li><a href="customers.php">Customers</a></li>
         <li><a href="booking.php">Booking</a></li>
         <li><a href="billing.php">Billing</a></li>
         <li><a href="changepassword.php">Change Password</a></li>
