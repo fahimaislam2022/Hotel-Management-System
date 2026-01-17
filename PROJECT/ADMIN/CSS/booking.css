@@ -51,3 +51,9 @@
     border-collapse: collapse;
 }
 
+.table-container th, 
+.table-container td {
+    border-bottom: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
