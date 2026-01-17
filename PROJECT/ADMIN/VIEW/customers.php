@@ -41,6 +41,47 @@ include("../CONTROL/customer_data.php");
             <button type="submit" class="btn btn-primary" style="width:100%">Add Customer</button>
         </form>
     </div>
+<div class="table-container">
+        <h3>Registered Customers</h3>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Password</th>
+                <th>Total Visits</th>
+                <th>Action</th>
+            </tr>
+
+            <?php if ($customers && $customers->num_rows > 0): ?>
+                <?php while ($c = $customers->fetch_assoc()): ?>
+                <tr>
+                    <form method="POST" action="../CONTROL/customers_data.php">
+                        <input type="hidden" name="action" value="edit">
+                        <input type="hidden" name="id_customer" value="<?php echo $c['id_customer']; ?>">
+                        <td><?php echo $c['id_customer']; ?></td>
+                        <td><input type="text" name="name" value="<?php echo htmlspecialchars($c['name']); ?>" required></td>
+                        <td><input type="email" name="email" value="<?php echo htmlspecialchars($c['email']); ?>" required></td>
+                        <td><input type="text" name="phone" value="<?php echo htmlspecialchars($c['phone']); ?>" required></td>
+                        <td><input type="text" name="password" value="<?php echo htmlspecialchars($c['password']); ?>" required></td>
+                        <td><input type="number" name="total_visits" value="<?php echo $c['total_visits']; ?>" min="0"></td>
+                        <td>
+                            <button type="submit" class="btn btn-warning">Update</button>
+                            <a href="../CONTROL/customers_data.php?delete=<?php echo $c['id_customer']; ?>"
+                               class="btn btn-danger"
+                               onclick="return confirm('Are you sure you want to delete this customer?');">
+                               Delete
+                            </a>
+                        </td>
+                    </form>
+                </tr>
+                <?php endwhile; ?>
+            <?php else: ?>
+                <tr><td colspan="7">No customers found.</td></tr>
+            <?php endif; ?>
+        </table>
+    </div>
 
 </body>
 </html>
