@@ -8,3 +8,18 @@
 .btn-primary { background-color: #1a56db; color: white; }
 .btn-warning { background-color: #ffc107; color: black; }
 .btn-danger { background-color: #dc3545; color: white; }
+.form-box {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    width: 350px;
+    margin-bottom: 20px;
+}
+.form-box input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
