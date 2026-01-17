@@ -11,6 +11,7 @@ include("../CONTROL/customer_data.php");
 <head>
     <title>HMS Customers</title>
     <link rel="stylesheet" href="../CSS/dashboard.css">
+    <link rel="stylesheet" href="../CSS/customers.css">
     
 </head>
 <body>
