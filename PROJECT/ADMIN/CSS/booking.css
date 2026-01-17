@@ -5,3 +5,5 @@
     font-size: 13px;
     cursor: pointer;
 }
+.btn-primary { background-color: #1a56db; color: white; }
+.btn-danger { background-color: #dc3545; color: white; }
