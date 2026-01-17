@@ -38,3 +38,7 @@
     padding: 8px;
     text-align: left;
 }
+.table-container th {
+    background-color: #f5f5f5;
+    color: #555;
+}
