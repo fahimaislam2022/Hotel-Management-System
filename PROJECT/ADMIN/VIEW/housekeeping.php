@@ -27,6 +27,9 @@ include("../CONTROL/housekeeping_data.php");
         <li><a href="changepassword.php">Change Password</a></li>
         <li><a href="../CONTROL/logout.php">Logout</a></li>
     </ul>
+    <div class="user-mini">
+        <div class="user-info"><h4><?php echo $_SESSION['username']; ?></h4><span>Manager</span></div>
+    </div>
 </div>
 <div class="main">
     <header>
