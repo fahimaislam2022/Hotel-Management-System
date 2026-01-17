@@ -89,12 +89,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     
     <?php if ($successMsg): ?>
-        <p style="color: green; font-weight: bold;">
-            <?= $successMsg; ?>
+        <p class="success"> <?= $successMsg; ?>
         </p>
     <?php elseif ($errorMsg): ?>
-        <p style="color: red; font-weight: bold;">
-            <?= $errorMsg; ?>
+        <p class="error"><?= $errorMsg; ?>
         </p>
     <?php endif; ?>
 
