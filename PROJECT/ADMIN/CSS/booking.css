@@ -46,3 +46,8 @@
     margin-bottom: 10px;
     color: #333;
 }
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
