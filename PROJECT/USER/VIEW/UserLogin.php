@@ -15,14 +15,15 @@
 
         <input type="password" name="password" placeholder="Enter Password">
 
-        <label>
-            <input type="checkbox" name="remember" value="1"> Remember me
-        </label>
+        <label class="checkbox-label">
+    <input type="checkbox" name="remember" value="1" <?= ($remember === "1") ? "checked" : "" ?>>
+    Remember me
+</label>
 
-        <input type="submit" value="Login">
+        <input type="submit" value="Login" class ="btn-login"  onclick="window.location.href='UserDashboard.php'">
 
-        <div class="secondary-btns" onclick="window.location.href='UserDashboard.php'>
-            <input type="button" value="Forgot Password" onclick="window.location.href='Forgotpassword.php'">
+        <div class="secondary-btns" >
+            <input type= "button" value="Forgot Password" onclick="window.location.href='Forgotpassword.php'">
             <input type="button" value="Sign Up" onclick="window.location.href='UserSignup.php'">
         </div>
     </form>
