@@ -46,7 +46,7 @@ function signupUser() {
         document.getElementById('signupEError').innerHTML !== "" ||
         document.getElementById('signupPError').innerHTML !== ""
     ) {
-        return; // stop if there are validation errors
+        return; 
     }
 
     const username = encodeURIComponent(document.getElementById('signupUsername').value.trim());
@@ -54,7 +54,7 @@ function signupUser() {
     const password = encodeURIComponent(document.getElementById('signupPassword').value);
 
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "../CONTROL/UserSignupHandler.php", true);
+    xhr.open("POST", "../CONTROL/SignupvalidationHandler.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
     xhr.onload = function () {
@@ -64,7 +64,7 @@ function signupUser() {
 
             if (response === "success") {
                 msg.style.color = "green";
-                msg.innerHTML = "Signup successful! Redirecting...";
+                msg.innerHTML = "Signup successful! ";
                 setTimeout(() => {
                     window.location.href = "../View/UserDashboard.php";
                 }, 1500);

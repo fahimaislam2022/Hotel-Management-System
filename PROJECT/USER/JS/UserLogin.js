@@ -1,50 +1,46 @@
 function loginUser() {
-    const btn = document.querySelector('.btn[type="submit"]');
-    const statusMsg = document.getElementById('loginSuccess');
-   
-    const isUValid = checkLoginUsername();
-    const isPValid = checkLoginPassword();
 
-    const username = document.getElementById('loginUsername').value.trim();
-    const password = document.getElementById('loginPassword').value;
+    const username = document.getElementById("loginUsername").value.trim();
+    const password = document.getElementById("loginPassword").value;
     const remember = document.querySelector('input[name="remember"]:checked') ? '1' : '0';
-    
-    
-    if(!isUValid || !isPValid) return;
+    const statusMsg = document.getElementById("loginSuccess");
 
-    
-    btn.value = "Logging in...";
-    btn.disabled = true;
+    // Empty field check
+    if (username === "" || password === "") {
+        alert("All fields are required!");
+        return;
+    }
 
-   
-    const params = "username=" + encodeURIComponent(username) + 
-                   "&password=" + encodeURIComponent(password) + 
-                   "&remember=" + encodeURIComponent(remember);
+    // Length validation
+    if (username.length <= 3) {
+        alert("Username must be greater than 3 characters!");
+        return;
+    }
+
+    if (password.length <= 4) {
+        alert("Password must be greater than 4 characters!");
+        return;
+    }
+
+    const params =
+        "username=" + encodeURIComponent(username) +
+        "&password=" + encodeURIComponent(password) +
+        "&remember=" + encodeURIComponent(remember);
 
     const xhttp = new XMLHttpRequest();
-    
-    
-    xhttp.open('POST', '../CONTROL/loginCheck.php', true);
-    
-  
+    xhttp.open("POST", "../CONTROL/loginCheck.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-            btn.value = "Login";
-            btn.disabled = false;
-            
-            if (this.status == 200) {
-                const response = this.responseText.trim();
-                
-                if (response === 'user_success') {
-                    window.location.href = 'userdashboard.php';
-                } else {
-                 
-                    statusMsg.innerHTML = response;
-                }
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+
+            if (this.responseText.trim() === "success") {
+                statusMsg.innerHTML = "Login successful!";
+                setTimeout(() => {
+                    window.location.href = "userdashboard.php";
+                }, 1000);
             } else {
-                statusMsg.innerHTML = "Connection error. Try again.";
+                alert(this.responseText);
             }
         }
     };

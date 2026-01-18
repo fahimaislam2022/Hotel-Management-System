@@ -1,8 +1,12 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start();
-include "db.php"; 
+include "../MODEL/db.php"; 
 
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+echo "DB connected successfully!";
+ /*if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     http_response_code(405);
     exit;
 }
@@ -37,7 +41,7 @@ $hashPassword = password_hash($password, PASSWORD_DEFAULT);
 
 $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
 if (!$stmt) {
-    echo "Database error: prepare failed.";
+    echo "Database error";
     exit;
 }
 
@@ -53,4 +57,5 @@ if ($stmt->execute()) {
 }
 
 $stmt->close();
-$conn->close();
+$conn->close();*/
+?>

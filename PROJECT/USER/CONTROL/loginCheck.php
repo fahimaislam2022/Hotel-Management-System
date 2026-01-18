@@ -1,38 +1,44 @@
 <?php
 session_start();
 
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    echo "Invalid request!";
+    exit;
+}
 
-if (isset($_POST['username']) && isset($_POST['password'])) {
-    
-    $username = trim($_POST['username']);
-    $password = $_POST['password'];
-    $remember = $_POST['remember']; 
+$username = trim($_POST['username'] ?? "");
+$password = $_POST['password'] ?? "";
+$remember = $_POST['remember'] ?? "0";
 
-  
-    if ($username === "Sinthiaaa" && $password === "1234") {
-        
-       
-        $_SESSION['user'] = $username;
-        $_SESSION['status'] = true;
+if ($username === "" || $password === "") {
+    echo "All fields are required!";
+    exit;
+}
 
-       
-        if ($remember === '1') {
-            
-            setcookie('remember_user', $username, time() + (86400 * 30), "/");
-        } else {
-           
-            setcookie('remember_user', '', time() - 3600, "/");
-        }
+if (strlen($username) <= 3 || strlen($password) <= 4) {
+    echo "Invalid username or password length!";
+    exit;
+}
 
-       
-        echo "user_success";
-        
+/*
+  Demo credentials
+  Replace this part with DATABASE check later
+*/
+$validUser = "admin";
+$validPass = "admin123";
+
+if ($username === $validUser && $password === $validPass) {
+
+    $_SESSION['username'] = $username;
+
+    // Remember Me cookie
+    if ($remember === "1") {
+        setcookie("remember_user", $username, time() + (86400 * 7), "/");
     } else {
-        
-        echo "Invalid Username or Password!";
+        setcookie("remember_user", "", time() - 3600, "/");
     }
 
+    echo "success";
 } else {
-    echo "Bad Request: No data received.";
+    echo "Invalid username or password!";
 }
-?>
