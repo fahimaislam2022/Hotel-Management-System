@@ -21,7 +21,7 @@
 
         <input type="submit" value="Login">
 
-        <div class="secondary-btns">
+        <div class="secondary-btns" onclick="window.location.href='UserDashboard.php'>
             <input type="button" value="Forgot Password" onclick="window.location.href='Forgotpassword.php'">
             <input type="button" value="Sign Up" onclick="window.location.href='UserSignup.php'">
         </div>

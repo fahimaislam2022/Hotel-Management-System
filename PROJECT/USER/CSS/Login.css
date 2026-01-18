@@ -1,6 +1,6 @@
 
 body {
-     background: pink !important;
+    background: #f0f4f8; 
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0; 
@@ -69,10 +69,10 @@ label input[type="checkbox"] {
 }
 
 
-.btn {
+.btn-login {
     width: 100%; 
     padding: 14px;
-    margin-top: 15px;
+    margin-top: 15px; 
     border: 2px solid #007bff; 
     border-radius: 30px;
     background: #007bff; 
@@ -81,9 +81,10 @@ label input[type="checkbox"] {
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
+    display: block;
 }
 
-.btn:hover {
+.btn-login:hover {
     background: #ffffff;
     color: #007bff;
     transform: translateY(-2px);
