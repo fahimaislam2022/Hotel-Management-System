@@ -1,5 +1,6 @@
+
 body {
-    background: #fff;
+    background: #f0f4f8; 
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0; 
@@ -7,25 +8,27 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #000;
+    color: #333;
 }
+
 
 .login-box {
     width: 380px;
     padding: 40px;
     border-radius: 15px;
     text-align: center;
-    background: #fff;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
-    color: black;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
+
 
 .login-box h1 {
     margin-bottom: 25px;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 600;
-    color: #000;
+    color: #007bff;
 }
+
 
 input[type="text"],
 input[type="password"] {
@@ -36,17 +39,24 @@ input[type="password"] {
     border-radius: 10px;
     font-size: 14px;
     background: #fff;
-    color: #000;
+    color: #333;
     box-sizing: border-box; 
+    transition: 0.3s;
 }
 
 input::placeholder {
-    color: rgba(0,0,0,0.6);
+    color: rgba(0,0,0,0.5);
 }
 
 input:focus {
     outline: none;
+    border-color: #0056b3;
     box-shadow: 0 0 8px rgba(0,123,255,0.3);
+}
+
+
+label input[type="checkbox"] {
+    margin-right: 8px;
 }
 
 .checkbox-label {
@@ -57,6 +67,7 @@ input:focus {
     color: #007bff;
     cursor: pointer;
 }
+
 
 .btn {
     width: 100%; 
@@ -73,17 +84,17 @@ input:focus {
 }
 
 .btn:hover {
-    background: #fff;
+    background: #ffffff;
     color: #007bff;
     transform: translateY(-2px);
 }
+
 
 .secondary-btns {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
-
 
 .secondary-btns input {
     flex: 1;
@@ -103,14 +114,37 @@ input:focus {
     background: rgba(0, 123, 255, 0.05); 
 }
 
+
 .error-msg {
-    color: #ff4d4d;
+    color: #e74c3c;
     font-size: 13px;
     text-align: center;
     margin: 5px 0; 
 }
+
 .success-msg {
     color: #2ecc71;
     font-weight: 600;
+    text-align: center;
     margin-bottom: 12px;
+}
+
+
+.login-box > input[type="button"] {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: 2px solid #007bff;
+    background: #ffffff;
+    color: #007bff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-box > input[type="button"]:hover {
+    background: #007bff;
+    color: #fff;
+    transform: translateY(-2px);
 }

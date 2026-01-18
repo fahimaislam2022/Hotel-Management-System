@@ -1,18 +1,18 @@
 <?php
 session_start();
 
-// Initialize variables
+
 $errorMsg = "";
 $username = "";
 
-// Check if form submitted
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $username = trim($_POST['username'] ?? "");
     $password = $_POST['password'] ?? "";
     $remember = $_POST['remember'] ?? "";
 
-    // Validation
+  
     if ($username === "" || $password === "") {
         $errorMsg = "Please fill in all fields!";
     } elseif (strlen($username) < 3) {
@@ -20,22 +20,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (strlen($password) < 4) {
         $errorMsg = "Password must be at least 4 characters!";
     } else {
-        // Demo credentials
+        
         $validUser = "admin";
         $validPass = "admin123";
 
         if ($username === $validUser && $password === $validPass) {
-            // Set session
+           
             $_SESSION['username'] = $username;
 
-            // Set cookie if "remember me" checked
+            
             if ($remember === "1") {
                 setcookie("remember_user", $username, time() + (86400 * 7), "/");
             } else {
                 setcookie("remember_user", "", time() - 3600, "/");
             }
 
-            // Redirect to dashboard
+            
             header("Location: UserDashboard.php");
             exit;
         } else {
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// If error, show form again with error
+
 ?>
 
 <!DOCTYPE html>
