@@ -1,6 +1,6 @@
 <?php
 session_start();
-@include("../MODEL/db.php");
+include("../MODEL/db.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
@@ -9,10 +9,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($username) || empty($password)) {
         $error = "All fields are required!";
     } else {
-        $sql = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
+        $sql = "SELECT * FROM admin WHERE username='$username'";
         $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
+        if ($result && $result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $hashedPassword = $row['password'];
+
+          if (password_verify($password, $hashedPassword)) {
             $_SESSION["username"] = $username;
 
             
@@ -27,6 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: ../VIEW/dashboard.php");
             exit();
         } else {
+            $error = "Invalid username or password!";
+        }
+          } else {
             $error = "Invalid username or password!";
         }
     }
