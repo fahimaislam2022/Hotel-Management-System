@@ -28,7 +28,7 @@ function loginUser() {
         "&remember=" + encodeURIComponent(remember);
 
     const xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "../CONTROL/loginCheck.php", true);
+    xhttp.open("POST", "../CONTROL/UserLoginValidate.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
     xhttp.onreadystatechange = function () {
