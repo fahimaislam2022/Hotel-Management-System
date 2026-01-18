@@ -1,11 +1,10 @@
 <?php 
 session_start();
 
-/*if(!isset($_SESSION ['status'])|| $_SESSION['status']!==true)
-    {
-    header('location: UserLogin.php?error=badrequest');
-    exit();}*/
-
+if (!isset($_SESSION['username'])) {
+    header("Location: UserLogin.php");
+    exit;
+}
    
 
 ?>

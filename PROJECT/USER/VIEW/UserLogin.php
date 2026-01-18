@@ -1,4 +1,4 @@
-<?php include('../CONTROL/loginCheck.php'); ?>
+<?php include('../CONTROL/UserLoginValidate.php'); ?>
 
 <!DOCTYPE html>
 <html>

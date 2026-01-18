@@ -5,13 +5,13 @@ function loginUser() {
     const remember = document.querySelector('input[name="remember"]:checked') ? '1' : '0';
     const statusMsg = document.getElementById("loginSuccess");
 
-    // Empty field check
+    
     if (username === "" || password === "") {
         alert("All fields are required!");
         return;
     }
 
-    // Length validation
+  
     if (username.length <= 3) {
         alert("Username must be greater than 3 characters!");
         return;
@@ -37,7 +37,7 @@ function loginUser() {
             if (this.responseText.trim() === "success") {
                 statusMsg.innerHTML = "Login successful!";
                 setTimeout(() => {
-                    window.location.href = "userdashboard.php";
+                    window.location.href = "UserDashboard.php";
                 }, 1000);
             } else {
                 alert(this.responseText);

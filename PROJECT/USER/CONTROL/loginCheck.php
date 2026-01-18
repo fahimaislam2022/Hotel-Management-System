@@ -20,10 +20,7 @@ if (strlen($username) <= 3 || strlen($password) <= 4) {
     exit;
 }
 
-/*
-  Demo credentials
-  Replace this part with DATABASE check later
-*/
+
 $validUser = "admin";
 $validPass = "admin123";
 
@@ -31,7 +28,7 @@ if ($username === $validUser && $password === $validPass) {
 
     $_SESSION['username'] = $username;
 
-    // Remember Me cookie
+   
     if ($remember === "1") {
         setcookie("remember_user", $username, time() + (86400 * 7), "/");
     } else {
