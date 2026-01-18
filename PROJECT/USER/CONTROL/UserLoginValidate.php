@@ -4,6 +4,13 @@ session_start();
 
 $errorMsg = "";
 $username = "";
+$remember = "";
+
+
+if (isset($_COOKIE['remember_user'])) {
+    $username = $_COOKIE['remember_user'];
+    $remember = "1";
+}
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -12,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'] ?? "";
     $remember = $_POST['remember'] ?? "";
 
-  
+   
     if ($username === "" || $password === "") {
         $errorMsg = "Please fill in all fields!";
     } elseif (strlen($username) < 3) {
@@ -20,9 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (strlen($password) < 4) {
         $errorMsg = "Password must be at least 4 characters!";
     } else {
-        
-        $validUser = "admin";
-        $validPass = "admin123";
+       
+        $validUser = "sinthia";
+        $validPass = "sinthia123";
 
         if ($username === $validUser && $password === $validPass) {
            
@@ -35,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 setcookie("remember_user", "", time() - 3600, "/");
             }
 
-            
+          
             header("Location: UserDashboard.php");
             exit;
         } else {
@@ -43,8 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>User Login</title>
-    <link rel="stylesheet" href="../CSS/UserLogin.css">
+    <link rel="stylesheet" href="../CSS/Login.css">
 </head>
 <body>
 
@@ -60,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Login Now!</h1>
 
     <?php if ($errorMsg !== ""): ?>
-        <p style="color:red; text-align:center;"><?= htmlspecialchars($errorMsg) ?></p>
+        <p class="error-msg"><?= htmlspecialchars($errorMsg) ?></p>
     <?php endif; ?>
 
     <form method="POST" action="">
@@ -68,11 +73,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="password" name="password" placeholder="Enter Password">
 
         <label>
-            <input type="checkbox" name="remember" value="1" <?= isset($remember) && $remember === "1" ? "checked" : "" ?>>
+            <input type="checkbox" name="remember" value="1" <?= ($remember === "1") ? "checked" : "" ?>>
             Remember me
         </label>
 
-        <input type="submit" value="Login">
+        <input type="submit" value="Login" class="btn">
 
         <div class="secondary-btns">
             <input type="button" value="Forgot Password" onclick="window.location.href='Forgotpassword.php'">
@@ -80,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </form>
 
-    <input type="button" value="Back to Home" onclick="window.location.href='Homepage.php'">
+    <input type="button" value="Back to Home" onclick="window.location.href='Homepage.php'" class="btn">
 </div>
 
 </body>
