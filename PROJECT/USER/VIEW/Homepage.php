@@ -27,7 +27,7 @@
  
      <div class="feature-item">
             <div class="feature-image">
-                <img src="http://localhost/WEB%20TECH%20PROJECT/WEB-TECH/PROJECT/ADMIN/IMAGE/Homepage1st.jpg" alt="Premium Rooms">
+                <img src="../Image/Homepage1st.jpg" alt="Premium Rooms">
             </div>
             <div class="feature-content">
                 <h3>Premium Rooms</h3>
@@ -37,7 +37,7 @@
  
         <div class="feature-item">
             <div class="feature-image">
-                <img src="http://localhost/WEB%20TECH%20PROJECT/WEB-TECH/PROJECT/ADMIN/IMAGE/Homepage2nd.jpg" alt="Seamless Control">
+                <img src="../Image/Homepage2nd.jpg" alt="Seamless Control">
             </div>
             <div class="feature-content">
                 <h3>Seamless Control</h3>
@@ -47,7 +47,7 @@
  
          <div class="feature-item">
             <div class="feature-image">
-                <img src="http://localhost/WEB%20TECH%20PROJECT/WEB-TECH/PROJECT/ADMIN/IMAGE/Homepage3rd.jpg" alt="Secure Booking">
+                <img src="../Image/Homepage3rd.jpg" alt="Secure Booking">
             </div>
             <div class="feature-content">
                 <h3>Secure Booking</h3>

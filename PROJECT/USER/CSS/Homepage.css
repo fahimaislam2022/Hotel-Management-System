@@ -11,7 +11,7 @@ body {
 }
 .hero {
     height: 90vh;
-    background-image: url("http://localhost/WEB%20TECH%20PROJECT/WEB-TECH/PROJECT/ADMIN/IMAGE/Homepagebackground.jpg");
+    background-image: url("../Image/Homepagebackground.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
