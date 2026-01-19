@@ -135,8 +135,8 @@ include("../CONTROL/rooms_data.php");
                                    class="btn btn-danger" 
                                    onclick="return confirm('Are you sure you want to delete this room?')">
                                    Delete
-                                </a>
-                            <?php endif; ?>
+                                 </a>   
+                                 <?php endif; ?> 
                         </td>
                     </form>
                 </tr>
@@ -147,5 +147,6 @@ include("../CONTROL/rooms_data.php");
         </table>
     </div>
 </div>
+
 </body>
 </html>
