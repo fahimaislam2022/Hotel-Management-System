@@ -119,7 +119,7 @@ include("../CONTROL/booking_data.php");
     </div>
 
 </div>
-<!-- <script src="../JS/booking.js"></script> -->
+<script src="../JS/booking.js"></script>
 </body>
 </html>
 
