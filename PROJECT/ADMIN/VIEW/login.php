@@ -55,12 +55,8 @@ if (isset($_SESSION["username"])) {
             <label for="remember">Remember Me</label>
           </div>
 
-          <button type="submit" name="submit" id="loginBtn">Login</button>
+          <button type="submit" name="submit" id="loginBtn" >Login</button>
         </form>
-
-        <div class="links">
-          <a href="changePassword.php">Change Password</a>
-        </div>
       </div>
     </div>
   </div>

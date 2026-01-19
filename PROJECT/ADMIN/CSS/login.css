@@ -93,6 +93,7 @@ button {
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
+  box-sizing: border-box;
 }
 button:hover {
   background-color: #1E40AF;
@@ -101,17 +102,6 @@ button:hover {
   color: red;
   text-align: center;
   margin-bottom: 10px;
-}
-
-.links {
-  text-align: center;
-  margin-top: 15px;
-}
-
-
-.links a {
-  color: #2563EB;
-  text-decoration: none;
 }
 .userError, .passError {
   color: red;
