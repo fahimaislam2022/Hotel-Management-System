@@ -53,7 +53,6 @@ include("../CONTROL/housekeeping_data.php");
             <tr>
                 <th>Room No</th>
                 <th>Type</th>
-                <th>Price</th>
                 <th>Cleaning Status</th>
                 <th>Action</th>
             </tr>
@@ -67,7 +66,6 @@ include("../CONTROL/housekeeping_data.php");
                     <input type="hidden" name="room_number" value="<?php echo $r['room_number']; ?>">
                     <td><?php echo $r['room_number']; ?></td>
                     <td><?php echo $r['type']; ?></td>
-                    <td><?php echo $r['price']; ?></td>
                     <td>
                         <select name="cleaning_status">
                             <option value="Dirty" <?php if ($r['cleaning_status']=="Dirty") echo "selected"; ?>>Dirty</option>

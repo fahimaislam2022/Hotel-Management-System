@@ -71,10 +71,10 @@ include("../CONTROL/booking_data.php");
             </select>
 
             <label>Check-in Date</label>
-            <input type="date" name="checkin_date" required>
+            <input type="date" name="checkin_date" id="checkin_date" required>
 
             <label>Check-out Date</label>
-            <input type="date" name="checkout_date" required>
+            <input type="date" name="checkout_date" id="checkout_date" required>
 
             <button type="submit" class="btn btn-primary">Confirm Booking</button>
         </form>
@@ -119,6 +119,7 @@ include("../CONTROL/booking_data.php");
     </div>
 
 </div>
+<!-- <script src="../JS/booking.js"></script> -->
 </body>
 </html>
 

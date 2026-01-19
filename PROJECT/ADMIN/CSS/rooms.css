@@ -19,6 +19,13 @@
     width: 320px;
     margin-bottom: 20px;
 }
+.form-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #444;
+    font-weight: 600; 
+}
 .form-box input, .form-box select {
     width: 100%;
     padding: 8px;

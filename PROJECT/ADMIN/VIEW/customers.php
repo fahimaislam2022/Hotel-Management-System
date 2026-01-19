@@ -4,7 +4,7 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
-include("../CONTROL/customer_data.php");
+include("../CONTROL/customers_data.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -58,7 +58,7 @@ include("../CONTROL/customer_data.php");
             <input type="password" name="password" placeholder="Password" required>
             <label>Total Visits</label>
             <input type="number" name="total_visits" placeholder="Total Visits" value="0" min="0">
-            <button type="submit" class="btn btn-primary" style="width:100%">Add Customer</button>
+            <button type="submit" class="btn btn-primary" >Add Customer</button>
         </form>
     </div>
 <div class="table-container">
@@ -69,7 +69,6 @@ include("../CONTROL/customer_data.php");
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
-                <th>Password</th>
                 <th>Total Visits</th>
                 <th>Action</th>
             </tr>
@@ -84,7 +83,6 @@ include("../CONTROL/customer_data.php");
                         <td><input type="text" name="name" value="<?php echo htmlspecialchars($c['name']); ?>" required></td>
                         <td><input type="email" name="email" value="<?php echo htmlspecialchars($c['email']); ?>" required></td>
                         <td><input type="text" name="phone" value="<?php echo htmlspecialchars($c['phone']); ?>" required></td>
-                        <td><input type="text" name="password" value="<?php echo htmlspecialchars($c['password']); ?>" required></td>
                         <td><input type="number" name="total_visits" value="<?php echo $c['total_visits']; ?>" min="0"></td>
                         <td>
                             <button type="submit" class="btn btn-warning">Update</button>

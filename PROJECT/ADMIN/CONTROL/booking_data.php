@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
     $room_number = $_POST['room_number'];
     $checkin_date = $_POST['checkin_date'];
     $checkout_date = $_POST['checkout_date'];
-    $status = "Confirmed";
+    $status = "Pending";
 
     
     $priceQuery = $conn->query("SELECT price FROM rooms WHERE room_number='$room_number'");

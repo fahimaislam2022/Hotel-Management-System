@@ -62,16 +62,19 @@ include("../CONTROL/rooms_data.php");
         <h4>Add Room</h4>
         <form method="POST" action="../CONTROL/rooms_data.php" enctype="multipart/form-data">
             <input type="hidden" name="action" value="add">
+           <label>Type</label>
             <select name="type">
                 <option value="Standard">Standard</option>
                 <option value="Deluxe">Deluxe</option>
                 <option value="Suite">Suite</option>
             </select>
             <input type="hidden" name="price" value="0">
+            <label>Status</label>
             <select name="status">
                 <option value="Available">Available</option>
                 <option value="Occupied">Occupied</option>
             </select>
+            <label>Room Image</label>
             <input type="file" name="image" required>
             <button type="submit" class="btn btn-primary" style="width:100%">Add Room</button>
         </form>
@@ -85,7 +88,7 @@ include("../CONTROL/rooms_data.php");
                 <th>Room No</th>
                 <th>Image</th>
                 <th>Type</th>
-                <th>Price</th>
+                <th>$Price</th>
                 <th>Status</th>
                 <th>Action</th>
             </tr>
