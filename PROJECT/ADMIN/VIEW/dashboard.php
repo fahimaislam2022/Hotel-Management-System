@@ -6,7 +6,15 @@ if (!isset($_SESSION['username'])) {
 }
 
 include("../CONTROL/dashboard_data.php");
+
+$feedbacks = $conn->query("
+    SELECT name, email, message, created_at
+    FROM feedback
+    ORDER BY created_at DESC
+    LIMIT 5
+");
 ?>
+
 <!DOCTYPE html>
 <head>
     <title>HMS Dashboard</title>
@@ -84,6 +92,37 @@ include("../CONTROL/dashboard_data.php");
 
 </table>
 </div>
+<h3 style="margin-top: 30px;">Recent Feedback</h3>
+
+<div class="table-container" >
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Feedback</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php if ($feedbacks && $feedbacks->num_rows > 0): ?>
+                <?php while ($f = $feedbacks->fetch_assoc()): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($f['name']); ?></td>
+                        <td><?php echo htmlspecialchars($f['email']); ?></td>
+                        <td><?php echo htmlspecialchars($f['message']); ?></td>
+                        <td><?php echo $f['created_at']; ?></td>
+                    </tr>
+                <?php endwhile; ?>
+            <?php else: ?>
+                <tr>
+                    <td colspan="4">No feedback available.</td>
+                </tr>
+            <?php endif; ?>
+        </tbody>
+    </table>
 </div>
+</div>
+
 </body>
 </html>

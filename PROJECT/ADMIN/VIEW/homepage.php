@@ -58,12 +58,30 @@
 
      </div>
 </section>
+<section class="feedback">
+  <h2>We Value Your Feedback</h2>
+  <p>Please share your thoughts to help us improve your experience.</p>
 
+  <form id="feedbackForm" class="feedback-form">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="message">Your Feedback</label>
+    <textarea id="message" name="message" placeholder="Write your feedback here..." required></textarea>
+
+    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+    <p id="feedbackResult"></p>
+
+  </form>
+</section>
 
 <footer>
     <p>2025 Hotel Management System. All rights reserved.</p>
 </footer>
 
-
+<script src="../JS/homepage.js"></script>
 </body>
 </html>

@@ -49,7 +49,7 @@ if (isset($_SESSION["username"])) {
             <p id="passError" class="error"></p>
           </div>
 
-          <div class="checkbox-group">
+          <div class="checkbox-group" style="margin-bottom: 15px;">
             <input type="checkbox" name="remember" id="remember" 
                    <?php if(isset($_COOKIE['username'])) echo "checked"; ?>>
             <label for="remember">Remember Me</label>

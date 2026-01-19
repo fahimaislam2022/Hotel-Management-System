@@ -73,6 +73,7 @@ input[type="password"] {
   border-radius: 8px;
   font-size: 1rem;
   outline: none;
+  box-sizing: border-box;
 }
 input:focus {
   border-color: #2563EB;
