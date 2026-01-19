@@ -1,17 +1,45 @@
-<?php 
+<?php
 session_start();
-$err1 ="";
-$err2="";
-if(isset($_GET['error'])){
-    $error = $_GET['error'];
-    if($error==="Invalid"){
-        $err1 =" Please Type Valid Username and Password!";
-    }
-    elseif($error==="badrequest"){
-        $err2="Please Login";
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header("Location: ../VIEW/UserLogin.php");
+    exit;
+}
+
+$username = trim($_POST['username'] ?? "");
+$password = $_POST['password'] ?? "";
+$remember = $_POST['remember'] ?? "";
+
+
+if ($username === "" || $password === "") {
+    $_SESSION['errorMsg'] = "Please fill in all fields!";
+} elseif (strlen($username) < 3) {
+    $_SESSION['errorMsg'] = "Username must be at least 3 characters!";
+} elseif (strlen($password) < 4) {
+    $_SESSION['errorMsg'] = "Password must be at least 4 characters!";
+} else {
+   
+    $validUser = "sinthia";
+    $validPass = "sinthia123";
+
+    if ($username === $validUser && $password === $validPass) {
+        $_SESSION['username'] = $username;
+
+       
+        if ($remember === "1") {
+            setcookie("remember_user", $username, time() + (86400 * 7), "/");
+        } else {
+            setcookie("remember_user", "", time() - 3600, "/");
+        }
+
+       
+        header("Location: ../VIEW/UserDashboard.php");
+        exit;
+    } else {
+        $_SESSION['errorMsg'] = "Invalid username or password!";
     }
 }
-//cookie
-$username = isset($_COOKIE['remember_user'])?$_COOKIE['remember_user']:"";
-$rememberChecked = isset($_COOKIE['remember_user'])?true:false;
-?>
+
+
+header("Location: ../VIEW/UserLogin.php");
+exit;
