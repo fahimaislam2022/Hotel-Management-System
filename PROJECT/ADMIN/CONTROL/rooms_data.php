@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../MODEL/db.php");
 
 $conn->query("
