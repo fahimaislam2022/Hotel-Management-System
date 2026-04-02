@@ -78,7 +78,7 @@ It provides secure authentication and a set of management tools for handling hot
 
 ## Project Structure
 
-```bash
+``bash
 PROJECT/
 ├── ADMIN/
 ├── USER/
