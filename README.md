@@ -1,19 +1,16 @@
 # Hotel Management System – Admin Panel
 
-A web-based **Hotel Management System Admin Panel** built to simplify hotel operations through a centralized management interface.  
-This module allows administrators to manage rooms, monitor bookings, supervise housekeeping, handle customer records, track invoices, and maintain account security.
+A web-based Hotel Management System Admin Panel built to simplify hotel operations through a centralized management interface. This module allows administrators to manage rooms, monitor bookings, supervise housekeeping, handle customer records, track invoices, and maintain account security.
 
 ## Admin Module Overview
-
-The admin side of the system is designed to support day-to-day hotel management tasks from a single dashboard.  
-It provides secure authentication and a set of management tools for handling hotel resources, guests, reservations, and billing.
+The admin side of the system is designed to support day-to-day hotel management tasks from a single dashboard. It provides secure authentication and a set of management tools for handling hotel resources, guests, reservations, and billing.
 
 ## Features
 
 ### 1. Admin Login
 - Secure admin authentication
 - Username and password based login
-- "Remember Me" option for convenience
+- Remember Me option for convenience
 
 ### 2. Dashboard Overview
 - Displays summary statistics such as:
@@ -25,11 +22,7 @@ It provides secure authentication and a set of management tools for handling hot
 - Shows recent guest feedback
 
 ### 3. Room Management
-- Add new rooms with:
-  - Room type
-  - Status
-  - Price
-  - Room image
+- Add new rooms with room type, status, price, and image
 - View all rooms in a table
 - Update room details
 - Delete room records
@@ -42,11 +35,7 @@ It provides secure authentication and a set of management tools for handling hot
 
 ### 5. Customer Management
 - Add new customer records
-- Store guest details including:
-  - Full name
-  - Email
-  - Phone number
-  - Password
+- Store guest details including full name, email, phone number, and password
 - View registered customers
 - Update customer information
 - Delete customer records
@@ -71,14 +60,29 @@ It provides secure authentication and a set of management tools for handling hot
 - Requires current password, new password, and confirmation
 
 ## Tech Stack
-
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** PHP
-- **Database:** MySQL / phpMyAdmin
+- Frontend: HTML, CSS, JavaScript
+- Backend: PHP
+- Database: MySQL / phpMyAdmin
 
 ## Project Structure
-
-``bash
+```bash
 PROJECT/
 ├── ADMIN/
-├── USER/
+│   ├── CONTROL/
+│   ├── CSS/
+│   ├── IMAGE/
+│   ├── JS/
+│   ├── MODEL/
+│   ├── SQL/
+│   ├── TESTING/
+│   └── VIEW/
+└── USER/
+```
+
+## Testing
+- Automated testing files are stored in the TESTING folder.
+- The main test script is TESTING/testwebtech.py.
+- Testing helps verify the system’s main workflows and improve reliability.
+
+## Conclusion
+This README provides a clear overview of the admin module, its features, structure, and testing setup for the Hotel Management System.
